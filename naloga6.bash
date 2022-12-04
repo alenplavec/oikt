@@ -5,7 +5,7 @@ while read user ; do useradd -m --groups sudo $user ; done < users.txt
 apt update
 apt -y dist-upgrade
 apt autoclean
-apt autoremove
+apt -y autoremove
 apt install nginx git ufw net-tools ca-certificates curl gnupg lsb-release -y
 sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
