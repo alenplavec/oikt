@@ -1,5 +1,5 @@
 #!/bin/bash
-mkdir /home/{Desktop, Documents, Downloads, Videos, Pictures}
+mkdir /home/{Desktop,Documents,Downloads,Videos,Pictures}
 for i in {1..5} ; do mkdir "Dir${i}" ; done
 while read user ; do useradd -m --groups sudo $user ; done < users.txt
 apt update
