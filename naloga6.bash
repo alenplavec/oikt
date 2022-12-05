@@ -4,7 +4,7 @@ for i in {1..5} ; do mkdir "Dir${i}" ; done
 while read user ; do useradd -m --groups sudo $user ; done < users.txt
 apt update
 apt -y dist-upgrade
-apt autoclean
+apt -y autoclean
 apt -y autoremove
 apt install nginx git ufw net-tools ca-certificates curl gnupg lsb-release -y
 sudo mkdir -p /etc/apt/keyrings
