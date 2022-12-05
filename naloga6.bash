@@ -2,6 +2,7 @@
 mkdir /home/{Desktop,Documents,Downloads,Videos,Pictures}
 for i in {1..5} ; do mkdir "Dir${i}" ; done
 while read user ; do useradd -m --groups sudo $user ; done < users.txt
+sudo apt -y remove needrestart
 apt update
 apt -y dist-upgrade
 apt -y autoclean
